@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <img src="output%20examples/kindle_preview.jpg" alt="Vista previa del PDF generado en un Kindle" width="640">
+  <img src="output%20examples/kindle_preview.jpg" alt="Vista previa del PDF generado en un Kindle" width="320">
 </p>
 
 ---
