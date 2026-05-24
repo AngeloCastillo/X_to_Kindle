@@ -17,8 +17,8 @@ x_filter_log.txt
 *.log
 
 # Allow committed example files
-!examples/
-!examples/**
+!output examples/
+!output examples/**
 
 # Python
 __pycache__/

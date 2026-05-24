@@ -1,4 +1,14 @@
-# web-to-kindle
+<h1 align="center">X &nbsp;→&nbsp; Kindle</h1>
+
+<p align="center">
+  <em>De la timeline infinita a una sesión de lectura productiva en tu Kindle.</em>
+</p>
+
+<p align="center">
+  <img src="output%20examples/kindle_preview.jpg" alt="Vista previa del PDF generado en un Kindle" width="640">
+</p>
+
+---
 
 Dos herramientas en Python para "consumir" X (Twitter) de forma productiva:
 
@@ -154,10 +164,11 @@ Las acciones se registran en `x_filter_log.txt` con timestamp, categoría, usuar
 
 ## Ejemplos
 
-La carpeta [`examples/`](examples/) contiene salidas de muestra para que te hagas una idea del resultado sin ejecutar el script:
+La carpeta [`output examples/`](output%20examples/) contiene salidas de muestra para que te hagas una idea del resultado sin ejecutar el script:
 
-- [`examples/example.pdf`](examples/example.pdf) — PDF generado por `web_to_kindle.py` capturando el home de X (sin anuncios, con texto seleccionable y enlaces clickables a cada tweet).
-- [`examples/x_filter_log.example.txt`](examples/x_filter_log.example.txt) — log de una ejecución real de `x_filter.py` con clasificaciones INTEREST / UNINTEREST.
+- [`output examples/example.pdf`](output%20examples/example.pdf) — PDF generado por `web_to_kindle.py` capturando el home de X (sin anuncios, con texto seleccionable y enlaces clickables a cada tweet).
+- [`output examples/x_filter_log.example.txt`](output%20examples/x_filter_log.example.txt) — log de una ejecución real de `x_filter.py` con clasificaciones INTEREST / UNINTEREST.
+- [`output examples/kindle_preview.jpg`](output%20examples/kindle_preview.jpg) — foto real del PDF abierto en el Kindle.
 
 ## Estructura del repositorio
 
@@ -165,7 +176,7 @@ La carpeta [`examples/`](examples/) contiene salidas de muestra para que te haga
 .
 ├── web_to_kindle.py       # captura → PDF → email a Kindle
 ├── x_filter.py            # filtrado automático del feed
-├── examples/              # PDF y log de muestra
+├── output examples/       # PDF, log y foto del Kindle de muestra
 ├── requirements.txt
 ├── .env.example
 ├── .gitignore
