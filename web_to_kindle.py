@@ -53,7 +53,7 @@ USER_AGENT = (
 def build_output_basename(url: str) -> str:
     domain = urlparse(url).netloc or "page"
     domain = domain.replace("www.", "").replace(":", "_")
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    timestamp = datetime.now().strftime("%y-%m-%d_%H-%M")
     return f"{domain}_{timestamp}"
 
 
