@@ -10,7 +10,7 @@ Dos herramientas en Python para "consumir" X (Twitter) de forma productiva:
 - Python 3.10+
 - Google Chrome instalado (para codecs H.264/AAC; si no, hace fallback a Chromium bundled)
 - Cuenta de Amazon con email `@kindle.com` configurado (solo para `web_to_kindle.py`)
-- Cuenta de Cerebras con API key (solo para `x_filter.py`)
+- Cuenta de LLM con API key (solo para `x_filter.py`)
 
 ## Instalación
 
@@ -127,7 +127,7 @@ INTEREST_TOPICS = (
     "matemáticas, ingeniería o temas técnicos serios"
 )
 UNINTEREST_TOPICS = (
-    "sexo, contenido sexual, chismes, farándula, política partidista, "
+    "chismes, farándula, política partidista, "
     "banalidades, drama personal, religión o contenido improductivo/trivial"
 )
 ```
@@ -152,12 +152,20 @@ Las acciones se registran en `x_filter_log.txt` con timestamp, categoría, usuar
 
 **Comparte el perfil con `web_to_kindle.py`** (ambos usan `browser_profile_chrome/`), así no hay que loguearse dos veces.
 
+## Ejemplos
+
+La carpeta [`examples/`](examples/) contiene salidas de muestra para que te hagas una idea del resultado sin ejecutar el script:
+
+- [`examples/example.pdf`](examples/example.pdf) — PDF generado por `web_to_kindle.py` capturando el home de X (sin anuncios, con texto seleccionable y enlaces clickables a cada tweet).
+- [`examples/x_filter_log.example.txt`](examples/x_filter_log.example.txt) — log de una ejecución real de `x_filter.py` con clasificaciones INTEREST / UNINTEREST.
+
 ## Estructura del repositorio
 
 ```
 .
 ├── web_to_kindle.py       # captura → PDF → email a Kindle
 ├── x_filter.py            # filtrado automático del feed
+├── examples/              # PDF y log de muestra
 ├── requirements.txt
 ├── .env.example
 ├── .gitignore
@@ -171,9 +179,6 @@ Las acciones se registran en `x_filter_log.txt` con timestamp, categoría, usuar
 - **Virtualización del DOM**: X solo mantiene en memoria los tweets visibles, así que hay que capturar a medida que se hace scroll. Por eso `web_to_kindle.py` no usa `page.pdf()` directamente sino que combina screenshots.
 - **Texto escalado, imágenes intactas**: el script inyecta CSS que reduce solo `font-size` para que entren más tweets por página sin distorsionar imágenes/videos.
 
-## Privacidad
-
-`browser_profile_chrome/` contiene cookies de sesión (estás logueado en X dentro de él) y `.env` contiene API keys. **Ambos están en `.gitignore`** — nunca los hagas commit.
 
 ## Licencia
 

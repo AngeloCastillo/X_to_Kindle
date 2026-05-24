@@ -16,6 +16,10 @@ browser_profile_chromium/
 x_filter_log.txt
 *.log
 
+# Allow committed example files
+!examples/
+!examples/**
+
 # Python
 __pycache__/
 *.py[cod]
