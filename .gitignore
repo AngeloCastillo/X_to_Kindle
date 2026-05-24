@@ -1,0 +1,38 @@
+# Secrets
+.env
+*.env.local
+
+# Browser profiles (contain session cookies, sign-in data)
+browser_profile/
+browser_profile_chrome/
+browser_profile_chromium/
+
+# Generated output
+*.pdf
+*.epub
+*_shots/
+
+# Logs
+x_filter_log.txt
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+env/
+.pytest_cache/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
